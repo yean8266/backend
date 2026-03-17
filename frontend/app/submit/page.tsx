@@ -40,7 +40,7 @@ export default function SubmitPaper() {
 
     // 1. 简单的表单校验
     if (!title.trim() || !abstract.trim() || !contact.trim()) {
-      alert("标题、摘要和联系方式是必填项！否则发奖金的时候找不到你人。");
+      alert("标题、摘要和联系方式是必填项！否则发奖金的时候找不到您。");
       return;
     }
 
@@ -85,7 +85,7 @@ export default function SubmitPaper() {
       <div className="max-w-2xl mx-auto">
 
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-serif font-bold text-[#1d1d1f] mb-4">递交你的抽象档案。</h1>
+          <h1 className="text-4xl font-serif font-bold text-[#1d1d1f] mb-4">递交你的有趣文章。</h1>
           <p className="text-gray-500 text-lg">每一场伟大的思想，都值得被全网铭记。请在此申请 2026 年度贝诺尔奖提名。</p>
         </header>
 
@@ -201,10 +201,10 @@ export default function SubmitPaper() {
                 ${isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:scale-105 active:scale-95"}
               `}
             >
-              {isSubmitting ? "🚀 正在推送至学术委员会..." : "提交同行评审 (Submit)"}
+              {isSubmitting ? "🚀 正在推送至学术委员会..." : "提交管理员审核 (Submit)"}
             </button>
             <p className="mt-4 text-xs text-gray-400 font-mono">
-              *点击提交即代表您同意我们在《Noture》期刊上公开嘲笑您的工程痛楚。
+              *点击提交即代表您同意我们在BONEL网站上公开除联系方式以外的内容。
             </p>
           </div>
         </form>

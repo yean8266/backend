@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react"; // 删除了未使用的 Link
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import { supabase } from '@/lib/supabase';
 import { User } from '@supabase/supabase-js'; // 引入 Supabase 的用户类型
 import { fetchPapers, submitVote, submitUnvote, reportShareSuccess, fetchUserProfile } from '@/services/api';
@@ -180,7 +181,7 @@ export default function HubLeaderboard() {
           )}
 
           {papers.map((paper, index) => (
-            <div key={`${paper.id}-${index}`} className="bg-white border border-gray-100 p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow flex flex-col md:flex-row gap-8 items-start relative group">
+            <Link href={`/article/${paper.id}`} key={`${paper.id}-${index}`} className="bg-white border border-gray-100 p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all flex flex-col md:flex-row gap-8 items-start relative group cursor-pointer">
               {activeTab === 'hot' && page === 1 && index < 3 && !searchQuery && (
                 <div className={`absolute top-0 right-0 w-16 h-16 flex items-start justify-end p-3 rounded-bl-full font-black text-xl z-10 ${index === 0 ? 'bg-orange-100 text-orange-600' : index === 1 ? 'bg-gray-100 text-gray-500' : 'bg-amber-50 text-amber-700'}`}>#{index + 1}</div>
               )}
@@ -189,7 +190,7 @@ export default function HubLeaderboard() {
                   <span className="text-xs font-mono font-bold bg-gray-100 text-gray-500 px-2 py-1 rounded">{paper.id}</span>
                   {activeTab === 'new' && <span className="text-xs font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded">NEW</span>}
                 </div>
-                <h3 className="text-2xl font-bold font-serif text-[#1d1d1f] mb-2">{paper.title}</h3>
+                <h3 className="text-2xl font-bold font-serif text-[#1d1d1f] mb-2 group-hover:text-blue-600 transition-colors">{paper.title}</h3>
                 <p className="text-sm font-medium text-gray-500 mb-4">研究员：{paper.author}</p>
                 <p className="text-gray-600 font-light line-clamp-2 mb-6">{paper.abstract}</p>
               </div>
@@ -205,7 +206,7 @@ export default function HubLeaderboard() {
                   {paper.userVotes > 0 && <button onClick={() => handleUnvote(paper.id)} className="w-full py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-red-500">撤回一票</button>}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
 
           {/* 加载更多按钮 */}
@@ -216,7 +217,7 @@ export default function HubLeaderboard() {
                 disabled={isLoading}
                 className="bg-white border-2 border-gray-200 text-gray-600 px-8 py-3 rounded-full font-bold hover:border-black hover:text-black transition-colors disabled:opacity-50"
               >
-                {isLoading ? '加载中...' : '挖掘更多往期灾难 ↓'}
+                {isLoading ? '加载中...' : '挖掘更多往期文章 ↓'}
               </button>
             </div>
           )}

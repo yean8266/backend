@@ -9,12 +9,12 @@ export default function Navbar() {
 
   useEffect(() => {
     // 页面加载时检查是否有用户登录
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
+    supabase.auth.getSession().then(({ data }: { data: { session: any } }) => {
+      setUser(data.session?.user ?? null);
     });
 
     // 实时监听登录状态的变化
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
       setUser(session?.user ?? null);
     });
 
@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-8">
           <Link href="/hub" className="hover:text-black transition-colors">The Hub</Link>
           <Link href="/silence" className="hover:text-black transition-colors">Silence</Link>
-          <Link href="/noture" className="hover:text-black transition-colors">Noture</Link>
+          <Link href="/notrue" className="hover:text-black transition-colors">Noture</Link>
         </div>
 
         {/* 右侧：AI 工具 + 登录模块 */}
@@ -58,11 +58,13 @@ export default function Navbar() {
           {user ? (
             // 已登录状态：显示头像和退出按钮
             <div className="flex items-center gap-3 group">
-              <img 
-                src={user.user_metadata.avatar_url} 
-                alt="Avatar" 
-                className="w-8 h-8 rounded-full border border-gray-200 object-cover shadow-sm"
-              />
+              <Link href="/user" className="cursor-pointer transition-all duration-200 ease-in-out hover:opacity-80 hover:ring-2 hover:ring-zinc-200 ring-offset-2 rounded-full">
+                <img 
+                  src={user.user_metadata.avatar_url} 
+                  alt="Avatar" 
+                  className="w-8 h-8 rounded-full border border-gray-200 object-cover shadow-sm"
+                />
+              </Link>
               <button 
                 onClick={handleSignOut}
                 className="hidden md:block text-[10px] text-gray-400 hover:text-red-500 transition-colors cursor-pointer"

@@ -12,11 +12,11 @@ export default function Home() {
               <h2 className="text-sm font-semibold tracking-widest uppercase text-amber-600 mb-4">
                   重塑抽象学术边界
               </h2>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl text-[#1d1d1f]">提名抽象文章
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl text-[#1d1d1f]">提名"无用"但有趣的文章
                   <br/> 角逐属于你的“贝诺尔奖”！
               </h1>
               <p className="text-xl md:text-2xl text-gray-500 mb-10 max-w-2xl font-light leading-relaxed">
-                  你的抽象或许是另一种科研天赋！
+                  你的幽默或许是另一种科研天赋！
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-lg font-medium mb-12 items-center">
@@ -29,7 +29,7 @@ export default function Home() {
                   {/* 核心功能 2：新增的提交论文入口 */}
                   <Link href="/submit"
                         className="bg-[#1d1d1f] text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors shadow-sm w-full sm:w-auto">
-                      递交抽象论文
+                      递交有趣文章
                   </Link>
 
                   {/* 次级功能：探索往期档案 */}
@@ -111,7 +111,7 @@ export default function Home() {
 
           <div className="w-full md:w-1/2 aspect-video bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center group-hover:shadow-md transition-shadow">
              <span className="text-gray-400 font-mono text-xs text-center">
-               [ 界面占位: <br/> AI 一键生成“依托答辩”全过程 ]
+               [ 界面占位: <br/> AI 一键生成由随笔转化成的“有趣论文”全过程 ]
              </span>
           </div>
         </Link>

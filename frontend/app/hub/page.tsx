@@ -66,10 +66,10 @@ export default function HubLeaderboard() {
         <div className="border-b-2 border-black pb-8 mb-8 flex flex-col md:flex-row md:justify-between md:items-end gap-6">
           <div>
             <h2 className="text-xs font-bold tracking-[0.3em] text-gray-400 uppercase mb-3">Official Leaderboard</h2>
-            <h1 className="text-5xl font-serif font-bold text-[#1d1d1f]">贝诺尔工程抽象论文。</h1>
+            <h1 className="text-5xl font-serif font-bold text-[#1d1d1f]">贝诺尔工程有趣文章。</h1>
           </div>
           <Link href="/submit" className="bg-[#1d1d1f] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors whitespace-nowrap">
-            + 递交你的抽象档案
+            + 递交你的有趣文章
           </Link>
         </div>
 
@@ -102,7 +102,7 @@ export default function HubLeaderboard() {
           {sortedPapers.map((paper) => {
             const netScore = paper.upvotes - paper.downvotes;
             return (
-              <Link href={`/hub/${paper.id}`} key={paper.id} className="group block border-b border-gray-100 pb-10 hover:bg-gray-50 transition-colors -mx-6 px-6 rounded-2xl">
+              <Link href={`/article/${paper.id}`} key={paper.id} className="group block border-b border-gray-100 pb-10 hover:bg-gray-50 transition-colors -mx-6 px-6 rounded-2xl cursor-pointer">
                 <div className="flex items-start gap-8">
 
                   {/* 左侧：净得分 (Impact Factor) */}
