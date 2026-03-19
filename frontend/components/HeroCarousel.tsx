@@ -6,41 +6,51 @@ import Link from "next/link";
 
 // 原始数据
 const originalSlides = [
+    {
+    id: 0,
+    tag: "我们的愿景",
+    title: "写在前面，我们想做的网站不止......",
+    desc: "我的初衷是和搞笑诺贝尔奖一样，让大家思考一些看似无用实则有趣的问题，例如“意大利面为什么只能掰成三段？”",
+    image: "",
+    bgColor: "bg-gradient-to-br from-orange-100 to-amber-50",
+    link: "/silence",
+    textColor: "text-[#1d1d1f]"
+  },
   {
     id: 1,
-    tag: "LATEST NEWS",
-    title: "BoNel Prize 2026 Nominations",
-    desc: "Looking for the most spectacular engineering failures.",
-    image: "/bonel-medal.jpg",
+    tag: "最新消息",
+    title: "BoNel Prize 2026提名",
+    desc: "寻找最有趣的文章和奇思妙想？",
+    image: "/bonelprize.jpg",
     bgColor: "bg-[#f5f5f7]",
     link: "/vote",
     textColor: "text-[#1d1d1f]"
   },
   {
     id: 2,
-    tag: "FEATURED CASE",
-    title: "The Drone That Swam",
-    desc: "Why waterproof coating failed at 500m depth.",
+    tag: "幽默文章推荐",
+    title: "甲沟炎vs痔疮，哪个更痛？",
+    desc: "关注痛觉信号传递上的峰值强度，在感官维度上进行对比",
     image: "", 
     bgColor: "bg-gradient-to-br from-blue-100 to-blue-50",
-    link: "/silence",
+    link: "/vote",
     textColor: "text-[#1d1d1f]"
   },
   {
     id: 3,
-    tag: "SYSTEM UPDATE",
-    title: "AI Formatter v2.0 Live",
-    desc: "Now supporting Python notebooks and raw CSV logs.",
-    image: "",
+    tag: "即将到来",
+    title: "AI格式化生成有趣文章",
+    desc: "将你碎片零散的随笔，一键转化为标准的论述文章",
+    image: "/ailab.jpg",
     bgColor: "bg-gradient-to-br from-orange-100 to-amber-50",
     link: "/ai-lab",
     textColor: "text-[#1d1d1f]"
   },
   {
     id: 4,
-    tag: "COMMUNITY",
-    title: "Join the Discord",
-    desc: "Connect with 500+ engineers sharing their logs.",
+    tag: "社区",
+    title: "往期有趣文章档案",
+    desc: "灵机一动和奇思妙想将在我们这里被存档，被看见，被认可。",
     image: "",
     bgColor: "bg-[#1d1d1f]",
     link: "/hub",

@@ -133,12 +133,12 @@ export default function HubLeaderboard() {
         <div className="bg-[#1d1d1f] rounded-[2rem] p-8 md:p-12 text-white mb-12 relative overflow-hidden shadow-2xl">
           <div className="relative z-10">
             <h2 className="text-xs font-bold tracking-[0.3em] text-orange-500 uppercase mb-4">Bonel Prize · Monthly Hub</h2>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">3 月“抽象之巅”提名战。<br />用你的抽象，折现成科研经费。</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">4 月“抽象之巅”提名战。<br />用你的抽象，折现成科研经费。</h1>
             <p className="text-gray-400 mb-8 max-w-xl text-sm md:text-base">本月排名前三的工程灾难/抽象巨著，将晋级年度总决赛并获现金津贴。</p>
             <div className="flex gap-4 md:gap-8">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥇</div><div className="text-2xl font-black text-orange-400">¥108</div></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥈</div><div className="text-2xl font-black text-gray-300">¥68</div></div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥉</div><div className="text-2xl font-black text-amber-700">¥58</div></div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥇</div><div className="text-2xl font-black text-orange-400">¥88</div></div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥈</div><div className="text-2xl font-black text-gray-300">¥66</div></div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/10 flex-1"><div className="text-3xl mb-1">🥉</div><div className="text-2xl font-black text-amber-700">¥50</div></div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HeroCarousel from "../components/HeroCarousel";
 
 export default function Home() {
@@ -95,28 +96,41 @@ export default function Home() {
           ===================================== */}
       <section className="w-full max-w-6xl px-6">
         {/* 修改点：整个横幅块的点击跳转 */}
-        <Link
-          href="/ai-lab"
-          className="block bg-[#f5f5f7] rounded-[2rem] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-        >
-          <div className="max-w-md text-left">
-            <h3 className="text-3xl font-bold mb-4 text-[#1d1d1f]">Bonel 格式化 AI。</h3>
-            <p className="text-lg text-gray-500 mb-6 leading-relaxed">
-              丢进你那乱七八糟的工程废案或报错日志。见证它被一键重构为符合顶级期刊规范的学术巨著。
-            </p>
-            <span className="text-blue-600 font-medium flex items-center group-hover:underline">
+          <Link
+              href="/ai-lab"
+              className="block bg-[#f5f5f7] rounded-[2rem] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+              <div className="max-w-md text-left">
+                  <h3 className="text-3xl font-bold mb-4 text-[#1d1d1f]">Bonel 格式化 AI。</h3>
+                  <p className="text-lg text-gray-500 mb-6 leading-relaxed">
+                      丢进你那乱七八糟的工程废案或报错日志。见证它被一键重构为符合顶级期刊规范的学术巨著。
+                  </p>
+                  <span className="text-blue-600 font-medium flex items-center group-hover:underline">
               体验自动化编撰 <span className="ml-1 group-hover:translate-x-1 transition-transform">›</span>
             </span>
-          </div>
+              </div>
 
-          <div className="w-full md:w-1/2 aspect-video bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center group-hover:shadow-md transition-shadow">
-             <span className="text-gray-400 font-mono text-xs text-center">
-               [ 界面占位: <br/> AI 一键生成由随笔转化成的“有趣论文”全过程 ]
-             </span>
-          </div>
-        </Link>
+              <div
+                  className="w-full md:w-1/2 aspect-video bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center group-hover:shadow-md transition-shadow relative overflow-hidden">
+                  <Image
+                      src="/ailab.jpg"
+                      alt="AI 一键生成有趣论文全过程"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  />
+              </div>
+          </Link>
       </section>
 
+        {/* =====================================
+          SECTION 4: 免责声明 (Footer Disclaimer)
+          ===================================== */}
+      <section className="w-full max-w-4xl px-6 mt-20 mb-8 text-center">
+          <p className="text-xs text-gray-400 font-light leading-relaxed tracking-wide">
+              免责声明：本网站所有文章不涉及任何政治、男女对立等敏感话题，切勿上升高度。<br className="hidden sm:block" />
+              我们一起留存奇思妙想，谢谢大家！
+          </p>
+      </section>
     </main>
   );
 }
