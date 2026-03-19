@@ -25,7 +25,7 @@ async function getAuthToken(): Promise<string | null> {
  * 通用的 fetch 封装
  * 自动添加 Authorization Header 和 Content-Type
  */
-async function apiFetch(
+export async function apiFetch(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<Response> {
@@ -285,6 +285,23 @@ export async function submitPaper(formData: FormData): Promise<{ success: boolea
     throw new Error(errorData.detail || errorData.message || '提交失败');
   }
   
+  return response.json();
+}
+
+// ==================== 接口 F: 获取单篇文章详情 ====================
+
+export interface PaperDetail extends Paper {
+  original_link?: string;
+  pdf_url?: string;
+}
+
+/**
+ * 获取单篇文章详情 (对应后端 GET /nominees/{id})
+ * 
+ * 包含原文链接和 PDF 下载链接
+ */
+export async function fetchPaperDetail(paperId: string): Promise<PaperDetail> {
+  const response = await apiFetch(`/nominees/${paperId}`);
   return response.json();
 }
 
